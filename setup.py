@@ -4,7 +4,7 @@ from setuptools import find_packages
 
 setup(
     name='i18nize',
-    version='0.0.2',
+    version='0.0.3',
     author=u'Mohammed Hammoud',
     author_email='mohammed@iktw.se',
     packages=find_packages(),
@@ -13,5 +13,8 @@ setup(
     description='This is a simple Client that integrates with the localization service www.i18nize.com',
     long_description=open('README.md').read(),
     zip_safe=False,
-    include_package_data=True
+    include_package_data=True,
+    install_requires=[
+        'requests',
+    ],
 )
