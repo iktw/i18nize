@@ -7,7 +7,7 @@ class ConfigKeyError(Exception):
 
 
 class Config(object):
-    required_fields = ('PROJECT_ID', 'DESTINATION_DIR', 'LIVE', )
+    required_fields = ('project_id', 'destination_dir', 'live', )
 
     def __init__(self, **kwargs):
         self.kwargs = kwargs
@@ -24,5 +24,5 @@ class Config(object):
                 raise ConfigKeyError("i18nize configuration is missing '{}' required field.".format(field))
 
     def create_dirs(self):
-        if not os.path.exists(self.DESTINATION_DIR):
-            os.makedirs(self.DESTINATION_DIR)
+        if not os.path.exists(self.destination_dir):
+            os.makedirs(self.destination_dir)

@@ -4,7 +4,7 @@ from setuptools import find_packages
 
 setup(
     name='i18nize',
-    version='0.0.3',
+    version='0.0.4',
     author=u'Mohammed Hammoud',
     author_email='mohammed@iktw.se',
     packages=find_packages(),
