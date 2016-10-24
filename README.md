@@ -7,9 +7,9 @@ This is a simple Client that integrates with the localization service www.i18niz
 ### Config parameters
 | Name        | Type | Required | What? |
 | ------------- |-------------|-------------|-------------|
-| PROJECT_ID | String | Yes | This should be the id of your project. |
-| DESTINATION_PATH | String | Yes | The path where you want your locale to get saved. |
-| LIVE | Boolean | Yes | Set to *true* if you want to download your live locales otherwise your dev locales will get downloaded. |
+| project_id | String | Yes | This should be the id of your project. |
+| destination_dir | String | Yes | The path where you want your locale to get saved. |
+| live | Boolean | Yes | Set to *true* if you want to download your live locales otherwise your dev locales will get downloaded. |
 
 
 ### Example usage
@@ -24,6 +24,6 @@ client = Client(
 client.get_all_locales()
 
 OUTPUT:
->> Downloaded en to dist/locales/en.json (live: True)
->> Downloaded sv to dist/locales/sv.json (live: True)
+>> Downloaded en to dist/locales/en.json (live: False)
+>> Downloaded sv to dist/locales/sv.json (live: False)
 ```
