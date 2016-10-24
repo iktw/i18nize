@@ -7,10 +7,11 @@ class ConfigKeyError(Exception):
 
 
 class Config(object):
-    required_fields = ('project_id', 'destination_path', )
+    required_fields = ('project_id', )
 
-    def __init__(self, path):
-        self.config_path = path
+    def __init__(self, config_path, destination_path):
+        self.config_path = config_path
+        self.destination_path = destination_path
         self.kwargs = self.get_config()
         self.validate()
         for key, value in self.kwargs.iteritems():

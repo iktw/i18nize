@@ -7,9 +7,9 @@ from config import Config
 
 
 class Client:
-    def __init__(self, config_file_path, base_api_url=None):
-        self.base_api_url = base_api_url or "http://www.i18nize.com/api/v1/"
-        self.config = Config(path=config_file_path)
+    base_api_url = "http://www.i18nize.com/api/v1/"
+    def __init__(self, config_path, destination_path):
+        self.config = Config(config_path=config_path, destination_path=destination_path)
 
     def get_project_api_url(self):
         return os.path.join(self.base_api_url, 'content/projects', self.config.project_id, '')
