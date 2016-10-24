@@ -22,7 +22,7 @@ This is a simple Client that integrates with the localization service www.i18niz
 
 ### Example usage
 ```python
-	from i18nize import Client
+	from i18nize.client import Client
 
 	client = Client('/path/to/my/config/i18nize.json')
 	client.get_all_locales()
